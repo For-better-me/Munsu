@@ -1,0 +1,10 @@
+<!--pages/index/detailnews/news.wxml-->
+<view class="video-wrapper" poster="/images/sls.jpg">
+  <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" ></video>
+</view>
+ <view class="text-container">
+    <text class="tit">{{case.title}}</text>
+    <text class="time">{{case.date}}</text>
+    <image src="{{case.cmpimg}}" class="compare"></image>
+    <text class="content">{{case.detail}}</text>
+  </view>

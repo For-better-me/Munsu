@@ -1,0 +1,12 @@
+<!--pages/index/detail/detail.wxml-->
+<view class="detail-wrapper">
+   <image src="{{detail.imgSrc}}" class="poster"></image>
+   <view class="text-container">
+      <text class="tit">{{detail.title}}</text>
+      <text class="time">{{detail.date}}</text>
+      <text class="content">{{detail.detail}}</text>
+   </view>
+    <image src="/images/c2.png" class="collect" wx:if="{{collect}}" catchtap="collectTap"></image>
+      <image src="/images/c1.png" class="collect" wx:else="{{collect}}"  catchtap="collectTap"></image>
+      <text class="like">喜欢就收藏了吧</text>
+</view>

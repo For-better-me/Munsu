@@ -1,0 +1,7 @@
+<import src="../../info-template/info.wxml" />
+<view>
+  <view class="collect-item" wx:for="{{List}}" catchtap="toDetail" data-id="{{item.postId}}">
+    <template is="infoList" data="{{...item}}"></template>
+  </view>
+</view>
+

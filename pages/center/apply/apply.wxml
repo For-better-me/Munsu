@@ -1,0 +1,32 @@
+<!--pages/center/apply/apply.wxml-->
+<view class="apply-wrapper">
+   <form bindsubmit="onSubmit" bindreset="onReset">
+     <view class="name">
+        <text class="name-txt">姓名：</text>
+        <input class="name-input"  placeholder="请输入您的姓名" />
+     </view>
+     <view class="name">
+        <text class="name-txt">手机号：</text>
+        <input  class="name-input" type="number" />
+     </view>
+     <view class="sex">
+         <radio-group>
+            <view class="man">
+                <label for="man"><radio name="sex" id="man" value="男" />男</label>
+            </view>
+            <view class="woman">
+                <label for="woman"><radio name="sex" id="woman" value="女" />女</label>
+            </view>
+         </radio-group>
+     </view>
+     <view class="tip">
+     您需要重点提出的：
+     <textarea maxlength="100" />
+     </view>
+     <view class="btn">
+        <button form-type="reset" type="default">重置</button>
+        <button form-type="submit" type="primary">确定提交</button>
+     </view>
+     <text class="notice">* 注：我们会在3个工作日内和您联系，请保持电话畅通</text>
+   </form>
+</view>

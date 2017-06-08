@@ -1,0 +1,2 @@
+/* pages/index/newsList/newsList.wxss */
+@import "../../info-template/info.wxss";

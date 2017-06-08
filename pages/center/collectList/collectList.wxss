@@ -1,0 +1,9 @@
+/* pages/center/collectList/collectList.wxss */
+@import "../../info-template/info.wxss";
+.empty{
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  padding-top: 300rpx;
+}

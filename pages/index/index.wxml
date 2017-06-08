@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<import src="../info-template/info.wxml"/>
+<swiper class="header" autoplay circular indicator-dots indicator-color="#999999" indicator-active-color="#ffffff">
+  <swiper-item><image src="/images/new2.jpg"></image></swiper-item>
+  <swiper-item><image src="/images/new4.jpg"></image></swiper-item>
+</swiper>
+<view class="news-container" data-tit='纹绣那些事' data-sort="newList" catchtap="toList">
+  <view class="category">
+     <text class="tit">关于纹绣那些事</text>
+     <text class="more">更多</text>
+  </view>
+  <view wx:for="{{newsList}}" catchtap="toDetail" data-id="{{item.postId}}">
+    <template is="infoList" data="{{...item}}"></template>
+  </view>
+</view>
+<view class="news-container" data-tit='案例列表' data-sort="caseList" catchtap="toList">
+  <view class="category">
+     <text class="tit">经典案例</text>
+     <text class="more">更多</text>
+  </view>
+  <view wx:for="{{caseList}}" catchtap="toDetail2" data-id="{{item.postId}}">
+    <template is="infoList" data="{{...item}}"></template>
+  </view>
+</view>

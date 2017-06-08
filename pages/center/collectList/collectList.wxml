@@ -1,0 +1,7 @@
+<import src="../../info-template/info.wxml" />
+<view wx:if="{{collectList.length > 0}}">
+  <view class="collect-item" wx:for="{{collectList}}" catchtap="toDetail" data-id="{{item.postId}}">
+    <template is="infoList" data="{{...item}}"></template>
+  </view>
+</view>
+<text wx:else class="empty">您没有收藏文章，快去收藏好文章吧！</text>

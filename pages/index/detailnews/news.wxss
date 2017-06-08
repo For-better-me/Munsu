@@ -1,0 +1,39 @@
+/* pages/index/detailnews/news.wxss */
+.tit{
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  line-height: 56rpx;
+  margin-top: 36rpx;
+}
+.text-container{
+  width: 92%;
+  margin:0 auto;
+}
+.time{
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-top:20rpx;
+  margin-left: 6rpx;
+}
+.content{
+  font-size: 15px;
+  color: #333;
+  display: block;
+  margin-top: 25rpx;
+  line-height: 45rpx;
+  padding-bottom: 20rpx;
+}
+.video-wrapper{
+  width: 100%;
+}
+video{
+  width: 100%;
+}
+.compare{
+  width: 700rpx;
+  display: block;
+  margin:0 auto;
+  margin-top:20rpx;
+}

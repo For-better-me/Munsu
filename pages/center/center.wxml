@@ -1,0 +1,26 @@
+<!--pages/center/center.wxml-->
+<view class="bg">
+    <view class="person">
+      <view class="person-info">
+        <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+        <text class="username">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class="person-list">
+      <view class="list-item" catchtap="toCollect">
+        <image src="/images/coll.png" class="icon"></image>
+        <text class="icon-tit">我的收藏</text>
+        <image src="/images/arrow-right.png" class="fr"></image>
+      </view>
+      <view class="list-item" catchtap="toApply">
+        <image src="/images/apply.png" class="icon"></image>
+        <text class="icon-tit">我要申请</text>
+        <image src="/images/arrow-right.png" class="fr"></image>
+      </view>
+      <view class="list-item">
+        <image src="/images/about.png" class="icon" style="border:none"></image>
+        <text class="icon-tit">关于</text>
+        <image src="/images/arrow-right.png" class="fr"></image>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<template name="infoList">
+    <view class="container">
+      <view class="content">
+        <image src="{{imgSrc}}" class="poster"></image>
+        <view class="text-content">
+          <text class="title">{{title}}</text>
+          <text class="detail">{{detail}}</text>
+          <view class="like">
+            <view class="collect">
+              <image src="/images/view.png" class="icon"></image>
+              <text class="num">{{collection}}</text>
+            </view>
+            <view class="collect">
+              <image src="/images/chat1.png" class="icon"></image>
+              <text class="num">{{reading}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
