@@ -27,7 +27,7 @@
       "selectedIconPath":"/images/icon4.png",
       "iconPath":"/images/icon3.png"
     }],
-    "borderStyle": "black",
+    "borderStyle": "white",
     "backgroundColor": "#1e1e1e",
     "selectedColor": "#fff"
   }

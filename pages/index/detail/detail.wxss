@@ -46,3 +46,6 @@
   line-height: 40rpx;
   padding: 20rpx;
 }
+icon{
+  color: lawngreen
+}

@@ -1,16 +1,20 @@
 <!--pages/center/apply/apply.wxml-->
+<view class="laba">
+  <image src="/images/laba.png" class="icon-laba"></image>
+  <view class="txt-laba"><text class="txt">Tip：申请需要支付一元，若达成合作，1元抵10元 。本人拥有丰富的临床经验，欢迎大家前来咨询！！！</text></view>
+</view>
 <view class="apply-wrapper">
-   <form bindsubmit="onSubmit" bindreset="onReset">
+   <form bindsubmit="onSubmit">
      <view class="name">
         <text class="name-txt">姓名：</text>
-        <input class="name-input"  placeholder="请输入您的姓名" />
+        <input placeholder-class= "placeholder" class="name-input"  placeholder="请输入您的姓名"  name="username" />
      </view>
      <view class="name">
         <text class="name-txt">手机号：</text>
-        <input  class="name-input" type="number" />
+        <input placeholder-class= "placeholder" class="name-input" type="number" placeholder="请输入您的手机号" name="phone" />
      </view>
      <view class="sex">
-         <radio-group>
+         <radio-group name="sex">
             <view class="man">
                 <label for="man"><radio name="sex" id="man" value="男" />男</label>
             </view>
@@ -20,12 +24,15 @@
          </radio-group>
      </view>
      <view class="tip">
-     您需要重点提出的：
-     <textarea maxlength="100" />
+     上传图片让我更好了解你：
+     <view class="picList" name="picture">
+        <image src="{{item}}" wx:for = "{{imgSrc}}" class="desPic" wx:if = "{{index<9}}" data-url = "{{item}}" catchtap="onPreview"></image>
+         <image src="/images/add.png" class="addPic" catchtap="onAdd" wx:if = "{{imgSrc.length<9}}"></image>
+     </view>
+    
      </view>
      <view class="btn">
-        <button form-type="reset" type="default">重置</button>
-        <button form-type="submit" type="primary">确定提交</button>
+        <button form-type="submit" type="primary">支付</button>
      </view>
      <text class="notice">* 注：我们会在3个工作日内和您联系，请保持电话畅通</text>
    </form>

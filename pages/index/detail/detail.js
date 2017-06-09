@@ -2,7 +2,8 @@ var news=require('../../../data/news-data.js');
 Page({
   data: {
     detail:{},
-    collect:false
+    collect:false,
+    title:''
   },
 
   onLoad: function (options) {
@@ -11,7 +12,8 @@ Page({
     console.log(options);
      this.setData({
        detail:news.newList[id],
-       id:id
+       id:id,
+       title: news.newList[id].title
      })
      //判断内存是否有收藏列表
      var collect_list = wx.getStorageSync('collectList');
@@ -69,5 +71,30 @@ Page({
       collect_list.splice(index,1);
     }
     wx.setStorageSync('collectList', collect_list);
+  },
+  onShareAppMessage(){
+    let id = this.data.id;
+    let title = this.data.title;
+    return{
+      title:title,
+      path:'pages/index/detail/detail?id='+id,
+      success:function(){
+        wx.showToast({
+          title: '转发成功',
+          icon:'success',
+          duration:1000
+        })
+      },
+      fail:function(res){
+        if (res.errMsg == "shareAppMessage:fail cancel"){
+          wx.showToast({
+            title: '取消转发',
+            icon: 'cancel',
+            duration: 1000
+          })
+        }
+        console.log(res);
+      }
+    }
   }
 })

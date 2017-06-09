@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <import src="../info-template/info.wxml"/>
 <swiper class="header" autoplay circular indicator-dots indicator-color="#999999" indicator-active-color="#ffffff">
-  <swiper-item><image src="/images/new2.jpg"></image></swiper-item>
-  <swiper-item><image src="/images/new4.jpg"></image></swiper-item>
+  <swiper-item><image src="/images/new2.jpg" class="slider"></image></swiper-item>
+  <swiper-item><image src="/images/new4.jpg" class="slider"></image></swiper-item>
 </swiper>
 <view class="news-container" data-tit='纹绣那些事' data-sort="newList" catchtap="toList">
   <view class="category">
